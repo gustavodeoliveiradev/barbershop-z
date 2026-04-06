@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>BarberShop Z | Estilo & Tradição</title>
 </head>
-<body>
+
+<body id="home">
     <div class="noise"></div>
 
     <nav class="navbar">
@@ -21,25 +25,58 @@
             <h1 class="logo">BARBER<span>SHOP Z</span></h1>
 
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#" class="btn-nav">Agendamento</a></li>
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#sobre" class="nav-item">Sobre</a></li>
+                <li><a href="#servicos" class="nav-item">Serviços</a></li>
+                <li><a href="#contato" class="nav-item">Contato</a></li>
+                <li><a href="#agendamento" class="nav-item btn-nav">Agendamento</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="sobre">
         <div class="hero-content">
             <span class="hero-subtitle">Desde 2026 • Excelência em Cortes</span>
-            <h1>Estilo e Tradição para o <br><span>Homem Moderno</span></h1>
-            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado exclusivo.</p>
+            <h1>Estilo e Tradição para <br><span>Homem Moderno</span></h1>
+            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado
+                exclusivo.</p>
             <div class="hero-btns">
                 <a href="#" class="btn-primary">Agendar Horário</a>
                 <a href="#" class="btn-secondary">Ver Serviços</a>
             </div>
         </div>
     </header>
+    <section class="services" id="servicos">
+        <div class="container-title">
+            <span class="subtitle">Nossas Especialidades</span>
+            <h2>Serviços <span>Premium</span></h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-cut"></i></div>
+                <h3>Corte Clássico</h3>
+                <p>Tesoura ou máquina, acabamento perfeito com toalha quente.</p>
+                <span class="price">R$ 55,00</span>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-magic"></i></div>
+                <h3>Barba Completa</h3>
+                <p>Design de barba, alinhamento e hidratação com óleos essenciais.</p>
+                <span class="price">R$ 45,00</span>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-crown"></i></div>
+                <h3>Combo VIP</h3>
+                <p>O pacote completo: Corte + Barba + Sobrancelha e Bebida cortesia.</p>
+                <span class="price">R$ 90,00</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>

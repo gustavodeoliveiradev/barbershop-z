@@ -4,6 +4,10 @@
 ![Commits Diários](https://img.shields.io/badge/Ritmo-1%20Commit%20por%20Dia-gold?style=for-the-badge&logo=git)
 ![Tech](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-blue?style=for-the-badge)
 
+## 🖼️ Demonstração do Projeto
+
+![Preview do Projeto](./img/img-demo.png)
+
 > **Acesse o projeto:** [https://gustavodeoliveiradev.github.io/barbershop-z/](https://gustavodeoliveiradev.github.io/barbershop-z/)
 
 ## 🚀 Sobre o Projeto
@@ -12,7 +16,7 @@ Este é um projeto de estudo de Front-end focado em **Design de Elite**, tipogra
 ### 📅 Cronograma de Evolução (7 Dias)
 - [x] **Dia 0:** Setup inicial e deploy no GitHub Pages.
 - [x] **Dia 1:** Refatoração de Elite (Tipografia Premium & Noise Texture).
-- [ ] **Dia 2:** Seção de Serviços com CSS Grid e Hover Effects.
+- [x] **Dia 2:** Seção de Serviços com CSS Grid e Hover Effects.
 - [ ] **Dia 3:** Implementação de Dark/Light Mode e Variáveis CSS.
 - [ ] **Dia 4:** Micro-interações com JavaScript (Scroll Reveal).
 - [ ] **Dia 5:** Seção de Depoimentos com Carrossel/Scroll Horizontal.
