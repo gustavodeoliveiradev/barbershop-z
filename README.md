@@ -16,12 +16,12 @@ Este é um projeto de estudo de Front-end focado em **Design de Elite**, tipogra
 ### 📅 Cronograma de Evolução (7 Dias)
 - [x] **Dia 0:** Setup inicial e deploy no GitHub Pages.
 - [x] **Dia 1:** Refatoração de Elite (Tipografia Premium & Noise Texture).
-- [x] **Dia 2:** Seção de Serviços com CSS Grid e Hover Effects.
-- [ ] **Dia 3:** Implementação de Dark/Light Mode e Variáveis CSS.
-- [ ] **Dia 4:** Micro-interações com JavaScript (Scroll Reveal).
-- [ ] **Dia 5:** Seção de Depoimentos com Carrossel/Scroll Horizontal.
+- [x] **Dia 2:** Seção de Serviços com CSS Grid e Glow Effects.
+- [x] **Dia 3:** Interatividade com JS (Menu Auto-close & Scroll Reveal).
+- [ ] **Dia 4:** Implementação de Dark/Light Mode e Variáveis CSS.
+- [ ] **Dia 5:** Seção de Depoimentos (Opiniões) e Contato.
 - [ ] **Dia 6:** Otimização de Performance e SEO.
-- [ ] **Dia 7:** Finalização, README Completo e Polimento de UI.
+- [ ] **Dia 7:** Finalização e Polimento de UI.
 
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5 Semantic:** Estrutura clara e acessível.
