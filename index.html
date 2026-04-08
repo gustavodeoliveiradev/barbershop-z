@@ -22,14 +22,24 @@
                 <i class="fas fa-bars"></i>
             </label>
 
+            <!-- Toggle do tema movido para cá, ao lado da logo -->
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle-btn">
+                <label for="theme-toggle-btn" class="theme-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+
             <h1 class="logo">BARBER<span>SHOP Z</span></h1>
 
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item active">Home</a></li>
                 <li><a href="#sobre" class="nav-item">Sobre</a></li>
                 <li><a href="#servicos" class="nav-item">Serviços</a></li>
-                <li><a href="#contato" class="nav-item">Contato</a></li>
-                <li><a href="#agendamento" class="nav-item btn-nav">Agendamento</a></li>
+                <li><a href="#opinioes" class="nav-item">Opiniões</a></li>
+                <li><a href="#contato" class="nav-item btn-nav">Agendamento</a></li>
             </ul>
         </div>
     </nav>
@@ -41,11 +51,12 @@
             <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado
                 exclusivo.</p>
             <div class="hero-btns">
-                <a href="#" class="btn-primary">Agendar Horário</a>
-                <a href="#" class="btn-secondary">Ver Serviços</a>
+                <a href="#contato" class="btn-primary">Agendar Horário</a>
+                <a href="#servicos" class="btn-secondary">Ver Serviços</a>
             </div>
         </div>
     </header>
+
     <section class="services" id="servicos">
         <div class="container-title">
             <span class="subtitle">Nossas Especialidades</span>
@@ -75,6 +86,102 @@
             </div>
         </div>
     </section>
+
+    <section class="testimonials" id="opinioes">
+        <div class="container-title">
+            <span class="subtitle">O que dizem nossos clientes</span>
+            <h2>Experiência <span>Real</span></h2>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"O melhor degradê da cidade. O ambiente é sensacional e o atendimento te faz sentir em casa."</p>
+                <div class="client-info">
+                    <h4>Ricardo Santos</h4>
+                    <span>Cliente VIP</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"Atendimento impecável e profissionais extremamente qualificados. Recomendo a todos!"</p>
+                <div class="client-info">
+                    <h4>André Costa</h4>
+                    <span>Cliente Frequente</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"A melhor experiência de barbearia que já tive. Ambiente agradável e resultado perfeito."</p>
+                <div class="client-info">
+                    <h4>Marcelo Lima</h4>
+                    <span>Novo Cliente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Reserve seu <span>Horário</span></h2>
+                <p>Estamos prontos para transformar seu visual. Entre em contato ou nos visite.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rua das Barbearias, 123 - Centro</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(11) 99999-8888</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Seg - Sex: 9h às 20h | Sáb: 9h às 18h</p>
+                </div>
+            </div>
+
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Seu Nome" required id="nome">
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Seu E-mail" required id="email">
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="Seu Telefone" id="telefone">
+                </div>
+                <textarea placeholder="Como podemos ajudar?" required id="mensagem"></textarea>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>BARBER<span>SHOP Z</span></h2>
+                <p>Desde 2026 elevando o padrão do homem moderno.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BarberShop Z. Desenvolvido por <strong>Gustavo Oliveira</strong>.</p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
