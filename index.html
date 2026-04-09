@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>BarberShop Z | Estilo & Tradição</title>
@@ -15,6 +13,15 @@
 <body id="home">
     <div class="noise"></div>
 
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20BarberShop%20Z." 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Agendar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Agende pelo WhatsApp</span>
+    </a>
+
     <nav class="navbar">
         <div class="container">
             <input type="checkbox" id="menu-toggle">
@@ -22,7 +29,6 @@
                 <i class="fas fa-bars"></i>
             </label>
 
-            <!-- Toggle do tema movido para cá, ao lado da logo -->
             <div class="theme-switch">
                 <input type="checkbox" id="theme-toggle-btn">
                 <label for="theme-toggle-btn" class="theme-label">
@@ -45,11 +51,11 @@
     </nav>
 
     <header class="hero" id="sobre">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <span class="hero-subtitle">Desde 2026 • Excelência em Cortes</span>
             <h1>Estilo e Tradição para <br><span>Homem Moderno</span></h1>
-            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado
-                exclusivo.</p>
+            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado exclusivo.</p>
             <div class="hero-btns">
                 <a href="#contato" class="btn-primary">Agendar Horário</a>
                 <a href="#servicos" class="btn-secondary">Ver Serviços</a>
@@ -64,21 +70,21 @@
         </div>
 
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-stagger="1">
                 <div class="card-icon"><i class="fas fa-cut"></i></div>
                 <h3>Corte Clássico</h3>
                 <p>Tesoura ou máquina, acabamento perfeito com toalha quente.</p>
                 <span class="price">R$ 55,00</span>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-stagger="2">
                 <div class="card-icon"><i class="fas fa-magic"></i></div>
                 <h3>Barba Completa</h3>
                 <p>Design de barba, alinhamento e hidratação com óleos essenciais.</p>
                 <span class="price">R$ 45,00</span>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-stagger="3">
                 <div class="card-icon"><i class="fas fa-crown"></i></div>
                 <h3>Combo VIP</h3>
                 <p>O pacote completo: Corte + Barba + Sobrancelha e Bebida cortesia.</p>
@@ -94,7 +100,7 @@
         </div>
 
         <div class="testimonial-grid">
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-stagger="1">
                 <i class="fas fa-quote-left"></i>
                 <p>"O melhor degradê da cidade. O ambiente é sensacional e o atendimento te faz sentir em casa."</p>
                 <div class="client-info">
@@ -103,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-stagger="2">
                 <i class="fas fa-quote-left"></i>
                 <p>"Atendimento impecável e profissionais extremamente qualificados. Recomendo a todos!"</p>
                 <div class="client-info">
@@ -112,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-stagger="3">
                 <i class="fas fa-quote-left"></i>
                 <p>"A melhor experiência de barbearia que já tive. Ambiente agradável e resultado perfeito."</p>
                 <div class="client-info">
@@ -143,9 +149,7 @@
             </div>
 
             <div class="contact-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 

@@ -49,10 +49,10 @@ Este é um projeto de estudo de **Front-end avançado** focado em criar uma expe
 - [x] **Dia 1:** Refatoração de Elite (Tipografia Premium & Noise Texture)
 - [x] **Dia 2:** Seção de Serviços com CSS Grid e Glow Effects
 - [x] **Dia 3:** Interatividade com JS (Menu Auto-close & Scroll Reveal)
-- [x] **Dia 4:** Implementação de Dark/Light Mode e Variáveis CSS ✅
-- [ ] **Dia 5:** Seção de Depoimentos Expandida & Galeria de Fotos
-- [ ] **Dia 6:** Sistema de Agendamento & Integração com WhatsApp
-- [ ] **Dia 7:** Otimização de Performance, SEO e Acessibilidade
+- [x] **Dia 4:** Implementação de Dark/Light Mode e Variáveis CSS
+- [x] **Dia 5:** Botão WhatsApp Flutuante, Parallax & Animações Stagger ✅
+- [ ] **Dia 6:** Otimização de Performance, SEO e Acessibilidade
+- [ ] **Dia 7:** Finalização, Polimento e Novo Projeto
 
 ---
 
