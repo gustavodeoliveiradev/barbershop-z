@@ -963,9 +963,69 @@ body.light-mode .hero-bg {
     }
 }
 
-/* Esconder botão WhatsApp quando menu mobile está aberto */
-#menu-toggle:checked~.whatsapp-float {
+/* ==========================================
+   REMOVE HIGHLIGHT AZUL EM BOTÕES (MOBILE)
+   ========================================== */
+
+/* Remove o highlight azul em todos os elementos interativos */
+.btn-primary,
+.btn-secondary,
+.menu-icon,
+.nav-links a,
+.footer-social a,
+.whatsapp-float,
+.theme-label {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+/* Efeito de active mais suave para feedback tátil */
+.btn-primary:active,
+.btn-secondary:active,
+.footer-social a:active,
+.whatsapp-float:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+/* Menu hambúrguer sem highlight */
+.menu-icon:active {
+    opacity: 0.7;
+}
+
+/* Links da navegação sem highlight */
+.nav-links a:active {
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+/* Toggle do tema sem highlight */
+.theme-label:active {
+    opacity: 0.8;
+}
+
+/* ==========================================
+   CORREÇÃO: WhatsApp some quando menu abre
+   ========================================== */
+
+/* Quando o checkbox está checado, esconde o WhatsApp */
+body:has(#menu-toggle:checked) .whatsapp-float {
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+/* Fallback para navegadores sem :has() */
+#menu-toggle:checked ~ .whatsapp-float,
+#menu-toggle:checked ~ * .whatsapp-float {
+    opacity: 0;
+    visibility: hidden;
     transform: scale(0.8);
 }

@@ -12,16 +12,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const heroBg = document.querySelector('.hero-bg');
 
-    // 2. NAVEGAÇÃO MOBILE
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (menuToggle.checked) {
-                menuToggle.checked = false;
-            }
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
+// 2. NAVEGAÇÃO MOBILE
+// Fecha o menu ao clicar em qualquer link e gerencia active state
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Fecha o menu
+        if (menuToggle.checked) {
+            menuToggle.checked = false;
+        }
+        
+        // Remove active de TODOS os links primeiro
+        navLinks.forEach(l => l.classList.remove('active'));
+        
+        // Adiciona active apenas no link clicado
+        link.classList.add('active');
     });
+});
+
+// Também limpa o active quando abre o menu (clica no hambúrguer)
+menuToggle.addEventListener('change', () => {
+    if (menuToggle.checked) {
+        // Menu abriu - opcional: limpar todos os active
+        // navLinks.forEach(l => l.classList.remove('active'));
+    }
+});
 
     // 3. TEMA CLARO/ESCURO
     const loadTheme = () => {
