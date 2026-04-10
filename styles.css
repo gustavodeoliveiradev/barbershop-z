@@ -59,7 +59,7 @@ body.light-mode .footer-bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .hero {
+body.light-mode .hero-bg {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('img/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -127,9 +127,7 @@ body {
     position: static;
     transform: none;
     margin-right: 15px;
-    /* Espaço entre toggle e logo */
     order: -1;
-    /* Fica antes da logo */
 }
 
 .theme-label {
@@ -171,7 +169,7 @@ body {
     display: none;
 }
 
-#theme-toggle-btn:checked+.theme-label .ball {
+#theme-toggle-btn:checked + .theme-label .ball {
     transform: translateX(24px);
 }
 
@@ -181,9 +179,7 @@ body {
     letter-spacing: 2px;
     color: var(--text-light);
     order: 0;
-    /* Logo no meio */
     margin-right: auto;
-    /* Empurra a nav-links para a direita */
 }
 
 .logo span {
@@ -196,7 +192,6 @@ body {
     align-items: center;
     gap: 30px;
     order: 1;
-    /* Links à direita */
 }
 
 .nav-links a {
@@ -227,7 +222,6 @@ body {
     cursor: pointer;
     z-index: 101;
     order: -2;
-    /* Hambúrguer fica mais à esquerda que o toggle */
 }
 
 #menu-toggle {
@@ -237,13 +231,25 @@ body {
 /* HERO */
 .hero {
     min-height: calc(100vh - 90px);
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: -1;
 }
 
 .hero-content {
@@ -395,13 +401,9 @@ body {
     transform: translateY(0);
 }
 
-.service-card:nth-child(2) {
-    transition-delay: 200ms;
-}
-
-.service-card:nth-child(3) {
-    transition-delay: 400ms;
-}
+[data-stagger="1"] { transition-delay: 0ms; }
+[data-stagger="2"] { transition-delay: 150ms; }
+[data-stagger="3"] { transition-delay: 300ms; }
 
 .service-card::before {
     content: '';
@@ -483,13 +485,8 @@ body {
     transform: translateY(0);
 }
 
-.testimonial-card:nth-child(2) {
-    transition-delay: 200ms;
-}
-
-.testimonial-card:nth-child(3) {
-    transition-delay: 400ms;
-}
+.testimonial-card:nth-child(2) { transition-delay: 200ms; }
+.testimonial-card:nth-child(3) { transition-delay: 400ms; }
 
 .testimonial-card:hover {
     transform: translateX(5px);
@@ -548,7 +545,7 @@ body {
     color: var(--primary);
 }
 
-.contact-info>p {
+.contact-info > p {
     color: var(--text-muted);
     margin-bottom: 40px;
     font-size: 1.1rem;
@@ -722,14 +719,11 @@ body.light-mode .footer-bottom {
     .menu-icon {
         display: block;
         order: -2;
-        /* Hambúrguer primeiro */
     }
 
     .theme-switch {
         order: -1;
-        /* Toggle depois do hambúrguer */
         margin-right: auto;
-        /* Empurra a logo para o centro */
         margin-left: 15px;
     }
 
@@ -758,7 +752,7 @@ body.light-mode .footer-bottom {
         background: var(--bg-dark);
     }
 
-    #menu-toggle:checked~.nav-links {
+    #menu-toggle:checked ~ .nav-links {
         height: calc(100vh - 90px);
         padding: 40px 0;
     }
@@ -802,8 +796,7 @@ body.light-mode .footer-bottom {
         padding: 0 20px;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    .btn-primary, .btn-secondary {
         width: 100%;
         text-align: center;
     }
@@ -817,17 +810,15 @@ body.light-mode .footer-bottom {
     }
 }
 
-/* Seleção de texto */
 ::selection {
     background: var(--primary);
     color: var(--bg-dark);
 }
 
 /* ==========================================
-   ADIÇÕES DIA 5 - WhatsApp + Animações
+    WHATSAPP + ANIMAÇÕES
    ========================================== */
 
-/* Botão WhatsApp Flutuante */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -854,7 +845,6 @@ body.light-mode .footer-bottom {
     animation: none;
 }
 
-/* Tooltip do WhatsApp */
 .whatsapp-tooltip {
     position: absolute;
     right: 75px;
@@ -890,64 +880,12 @@ body.light-mode .footer-bottom {
     transform: translateX(0);
 }
 
-/* Animação Pulse */
 @keyframes whatsapp-pulse {
-    0% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    }
+    0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+    100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
 }
 
-/* Parallax no Hero */
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-bg {
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    will-change: transform;
-    z-index: -1;
-}
-
-body.light-mode .hero-bg {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Animações Escalonadas (Stagger) */
-[data-stagger="1"] {
-    transition-delay: 0ms;
-}
-
-[data-stagger="2"] {
-    transition-delay: 150ms;
-}
-
-[data-stagger="3"] {
-    transition-delay: 300ms;
-}
-
-[data-stagger="4"] {
-    transition-delay: 450ms;
-}
-
-/* Responsividade do WhatsApp */
 @media (max-width: 768px) {
     .whatsapp-float {
         width: 55px;
@@ -956,18 +894,16 @@ body.light-mode .hero-bg {
         bottom: 20px;
         right: 20px;
     }
-
+    
     .whatsapp-tooltip {
         display: none;
-        /* Esconde tooltip no mobile */
     }
 }
 
 /* ==========================================
-   REMOVE HIGHLIGHT AZUL EM BOTÕES (MOBILE)
+   REMOVE HIGHLIGHT AZUL (MOBILE)
    ========================================== */
 
-/* Remove o highlight azul em todos os elementos interativos */
 .btn-primary,
 .btn-secondary,
 .menu-icon,
@@ -985,7 +921,6 @@ body.light-mode .hero-bg {
     outline: none;
 }
 
-/* Efeito de active mais suave para feedback tátil */
 .btn-primary:active,
 .btn-secondary:active,
 .footer-social a:active,
@@ -994,27 +929,23 @@ body.light-mode .hero-bg {
     opacity: 0.9;
 }
 
-/* Menu hambúrguer sem highlight */
 .menu-icon:active {
     opacity: 0.7;
 }
 
-/* Links da navegação sem highlight */
 .nav-links a:active {
     color: var(--primary);
     opacity: 0.8;
 }
 
-/* Toggle do tema sem highlight */
 .theme-label:active {
     opacity: 0.8;
 }
 
 /* ==========================================
-   CORREÇÃO: WhatsApp some quando menu abre
+   WhatsApp some quando menu abre
    ========================================== */
 
-/* Quando o checkbox está checado, esconde o WhatsApp */
 body:has(#menu-toggle:checked) .whatsapp-float {
     opacity: 0;
     visibility: hidden;
@@ -1022,10 +953,63 @@ body:has(#menu-toggle:checked) .whatsapp-float {
     transition: all 0.3s ease;
 }
 
-/* Fallback para navegadores sem :has() */
 #menu-toggle:checked ~ .whatsapp-float,
 #menu-toggle:checked ~ * .whatsapp-float {
     opacity: 0;
     visibility: hidden;
     transform: scale(0.8);
+}
+
+/* ==========================================
+   ACESSIBILIDADE (NOVO)
+   ========================================== */
+
+/* Skip Link - atalho para teclado */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: var(--bg-dark);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 10000;
+    transition: top 0.3s;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Foco visível para teclado */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Remove outline do mouse, mantém do teclado */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Redução de motion (quem tem problema de movimento) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .whatsapp-float {
+        animation: none;
+    }
 }

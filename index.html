@@ -4,20 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- SEO Básico -->
     <title>BarberShop Z | Estilo & Tradição</title>
+    <meta name="description"
+        content="Barbearia premium em São Paulo. Corte clássico, barba completa e combo VIP. Agende seu horário!">
+
+    <!-- Open Graph (Facebook/WhatsApp) -->
+    <meta property="og:title" content="BarberShop Z | Estilo & Tradição">
+    <meta property="og:description"
+        content="Barbearia premium em São Paulo. Corte clássico, barba completa e combo VIP.">
+    <meta property="og:image" content="./img/img-demo.png">
+
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts e Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="home">
+    <!-- Skip Link (atalho para teclado) -->
+    <a href="#main-content" class="skip-link">Pular para conteúdo</a>
+
     <div class="noise"></div>
 
-    <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20BarberShop%20Z." 
-       class="whatsapp-float" 
-       target="_blank"
-       aria-label="Agendar pelo WhatsApp">
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20BarberShop%20Z."
+        class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Agende pelo WhatsApp</span>
     </a>
@@ -55,7 +76,8 @@
         <div class="hero-content">
             <span class="hero-subtitle">Desde 2026 • Excelência em Cortes</span>
             <h1>Estilo e Tradição para <br><span>Homem Moderno</span></h1>
-            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado exclusivo.</p>
+            <p>Onde a arte da barbearia clássica encontra a sofisticação contemporânea. Reserve seu momento de cuidado
+                exclusivo.</p>
             <div class="hero-btns">
                 <a href="#contato" class="btn-primary">Agendar Horário</a>
                 <a href="#servicos" class="btn-secondary">Ver Serviços</a>
@@ -63,111 +85,115 @@
         </div>
     </header>
 
-    <section class="services" id="servicos">
-        <div class="container-title">
-            <span class="subtitle">Nossas Especialidades</span>
-            <h2>Serviços <span>Premium</span></h2>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card" data-stagger="1">
-                <div class="card-icon"><i class="fas fa-cut"></i></div>
-                <h3>Corte Clássico</h3>
-                <p>Tesoura ou máquina, acabamento perfeito com toalha quente.</p>
-                <span class="price">R$ 55,00</span>
+    <main id="main-content">
+        <section class="services" id="servicos">
+            <div class="container-title">
+                <span class="subtitle">Nossas Especialidades</span>
+                <h2>Serviços <span>Premium</span></h2>
             </div>
 
-            <div class="service-card" data-stagger="2">
-                <div class="card-icon"><i class="fas fa-magic"></i></div>
-                <h3>Barba Completa</h3>
-                <p>Design de barba, alinhamento e hidratação com óleos essenciais.</p>
-                <span class="price">R$ 45,00</span>
-            </div>
+            <div class="services-grid">
+                <div class="service-card" data-stagger="1">
+                    <div class="card-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Corte Clássico</h3>
+                    <p>Tesoura ou máquina, acabamento perfeito com toalha quente.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
 
-            <div class="service-card" data-stagger="3">
-                <div class="card-icon"><i class="fas fa-crown"></i></div>
-                <h3>Combo VIP</h3>
-                <p>O pacote completo: Corte + Barba + Sobrancelha e Bebida cortesia.</p>
-                <span class="price">R$ 90,00</span>
-            </div>
-        </div>
-    </section>
+                <div class="service-card" data-stagger="2">
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Barba Completa</h3>
+                    <p>Design de barba, alinhamento e hidratação com óleos essenciais.</p>
+                    <span class="price">R$ 45,00</span>
+                </div>
 
-    <section class="testimonials" id="opinioes">
-        <div class="container-title">
-            <span class="subtitle">O que dizem nossos clientes</span>
-            <h2>Experiência <span>Real</span></h2>
-        </div>
-
-        <div class="testimonial-grid">
-            <div class="testimonial-card" data-stagger="1">
-                <i class="fas fa-quote-left"></i>
-                <p>"O melhor degradê da cidade. O ambiente é sensacional e o atendimento te faz sentir em casa."</p>
-                <div class="client-info">
-                    <h4>Ricardo Santos</h4>
-                    <span>Cliente VIP</span>
+                <div class="service-card" data-stagger="3">
+                    <div class="card-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Combo VIP</h3>
+                    <p>O pacote completo: Corte + Barba + Sobrancelha e Bebida cortesia.</p>
+                    <span class="price">R$ 90,00</span>
                 </div>
             </div>
+        </section>
 
-            <div class="testimonial-card" data-stagger="2">
-                <i class="fas fa-quote-left"></i>
-                <p>"Atendimento impecável e profissionais extremamente qualificados. Recomendo a todos!"</p>
-                <div class="client-info">
-                    <h4>André Costa</h4>
-                    <span>Cliente Frequente</span>
-                </div>
+        <section class="testimonials" id="opinioes">
+            <div class="container-title">
+                <span class="subtitle">O que dizem nossos clientes</span>
+                <h2>Experiência <span>Real</span></h2>
             </div>
 
-            <div class="testimonial-card" data-stagger="3">
-                <i class="fas fa-quote-left"></i>
-                <p>"A melhor experiência de barbearia que já tive. Ambiente agradável e resultado perfeito."</p>
-                <div class="client-info">
-                    <h4>Marcelo Lima</h4>
-                    <span>Novo Cliente</span>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-stagger="1">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"O melhor degradê da cidade. O ambiente é sensacional e o atendimento te faz sentir em casa."</p>
+                    <div class="client-info">
+                        <h4>Ricardo Santos</h4>
+                        <span>Cliente VIP</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-stagger="2">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Atendimento impecável e profissionais extremamente qualificados. Recomendo a todos!"</p>
+                    <div class="client-info">
+                        <h4>André Costa</h4>
+                        <span>Cliente Frequente</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-stagger="3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"A melhor experiência de barbearia que já tive. Ambiente agradável e resultado perfeito."</p>
+                    <div class="client-info">
+                        <h4>Marcelo Lima</h4>
+                        <span>Novo Cliente</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contato">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Reserve seu <span>Horário</span></h2>
-                <p>Estamos prontos para transformar seu visual. Entre em contato ou nos visite.</p>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Rua das Barbearias, 123 - Centro</p>
+        <section class="contact" id="contato">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Reserve seu <span>Horário</span></h2>
+                    <p>Estamos prontos para transformar seu visual. Entre em contato ou nos visite.</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua das Barbearias, 123 - Centro</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(11) 99999-8888</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Seg - Sex: 9h às 20h | Sáb: 9h às 18h</p>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p>(11) 99999-8888</p>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <p>Seg - Sex: 9h às 20h | Sáb: 9h às 18h</p>
-                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="input-group">
+                        <input type="text" placeholder="Seu Nome" required id="nome">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Seu E-mail" required id="email">
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Seu Telefone" id="telefone">
+                    </div>
+                    <textarea placeholder="Como podemos ajudar?" required id="mensagem"></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
             </div>
-
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMjguOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-                <div class="input-group">
-                    <input type="text" placeholder="Seu Nome" required id="nome">
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Seu E-mail" required id="email">
-                </div>
-                <div class="input-group">
-                    <input type="tel" placeholder="Seu Telefone" id="telefone">
-                </div>
-                <textarea placeholder="Como podemos ajudar?" required id="mensagem"></textarea>
-                <button type="submit" class="btn-primary">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="main-footer">
         <div class="footer-content">

@@ -1,10 +1,10 @@
 // ==========================================
-// BARBER SHOP Z - JavaScript (Dia 5)
+// BARBER SHOP Z - JavaScript
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. ELEMENTOS DO DOM
+    // Elementos
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelectorAll('.nav-links a');
     const themeBtn = document.getElementById('theme-toggle-btn');
@@ -12,32 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const heroBg = document.querySelector('.hero-bg');
 
-// 2. NAVEGAÇÃO MOBILE
-// Fecha o menu ao clicar em qualquer link e gerencia active state
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        // Fecha o menu
-        if (menuToggle.checked) {
-            menuToggle.checked = false;
-        }
-        
-        // Remove active de TODOS os links primeiro
-        navLinks.forEach(l => l.classList.remove('active'));
-        
-        // Adiciona active apenas no link clicado
-        link.classList.add('active');
+    // 1. NAVEGAÇÃO MOBILE
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuToggle.checked) {
+                menuToggle.checked = false;
+            }
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
     });
-});
 
-// Também limpa o active quando abre o menu (clica no hambúrguer)
-menuToggle.addEventListener('change', () => {
-    if (menuToggle.checked) {
-        // Menu abriu - opcional: limpar todos os active
-        // navLinks.forEach(l => l.classList.remove('active'));
-    }
-});
-
-    // 3. TEMA CLARO/ESCURO
+    // 2. TEMA CLARO/ESCURO
     const loadTheme = () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
@@ -57,7 +44,7 @@ menuToggle.addEventListener('change', () => {
 
     loadTheme();
 
-    // 4. ANIMAÇÃO DE SCROLL (Intersection Observer com Stagger)
+    // 3. ANIMAÇÃO DE SCROLL
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -77,7 +64,7 @@ menuToggle.addEventListener('change', () => {
 
     animatedElements.forEach(el => observer.observe(el));
 
-    // 5. PARALLAX NO HERO
+    // 4. PARALLAX NO HERO
     let ticking = false;
     
     const updateParallax = () => {
@@ -98,7 +85,7 @@ menuToggle.addEventListener('change', () => {
         }
     });
 
-    // 6. FORMULÁRIO DE CONTATO
+    // 5. FORMULÁRIO DE CONTATO
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -119,7 +106,7 @@ menuToggle.addEventListener('change', () => {
         });
     }
 
-    // 7. SCROLL SUAVE PARA ÂNCORAS
+    // 6. SCROLL SUAVE
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -133,15 +120,13 @@ menuToggle.addEventListener('change', () => {
         });
     });
 
-    // 8. DETECTAR VISIBILIDADE DA PÁGINA (pausar animações quando aba não está ativa)
+    // 7. PAUSAR ANIMAÇÕES QUANDO ABA INATIVA
     document.addEventListener('visibilitychange', () => {
         const whatsappBtn = document.querySelector('.whatsapp-float');
-        if (document.hidden) {
-            whatsappBtn.style.animationPlayState = 'paused';
-        } else {
-            whatsappBtn.style.animationPlayState = 'running';
+        if (whatsappBtn) {
+            whatsappBtn.style.animationPlayState = document.hidden ? 'paused' : 'running';
         }
     });
 
-    console.log("✂️ BarberShop Z: Dia 5 - WhatsApp & Animações carregados!");
+    console.log("✂️ BarberShop Z: Dia 7 - Tudo funcionando!");
 });
